@@ -13,156 +13,295 @@
 
 
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/*  Body  */
 
 body{
 
-    background-color: var(--cream);
+    margin: 0;
+
+    padding: 0;
 
     font-family: Arial, sans-serif;
 
-    color: var(--dark-brown);
+    background-color: var(--cream);
 }
 
 
 
-.page-title{
+/* PRODUCTS SECTION */
+
+.products-section{
+
+    padding: 80px 10%;
+}
+
+
+
+/* Section Title */
+
+.section-title{
 
     text-align: center;
 
     font-size: 45px;
 
-    margin-top: 40px;
-
-    margin-bottom: 10px;
-
     color: var(--dark-brown);
+
+    margin-bottom: 60px;
 }
 
 
-.page-subtitle{
 
-    text-align: center;
-
-    color: var(--brown);
-
-    margin-bottom: 50px;
-
-    font-size: 18px;
-}
-
-
+/*  Products Grid  */
 
 .products-container{
 
     display: flex;
 
-    flex-wrap: wrap;
-
     justify-content: center;
 
-    gap: 35px;
+    flex-wrap: wrap;
 
-    padding: 40px;
+    gap: 40px;
 }
 
 
+
+/*  Product Card  */
 
 .product-card{
 
     background-color: white;
 
-    width: 270px;
+    width: 280px;
 
     border-radius: 20px;
 
     overflow: hidden;
 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 
     transition: 0.4s;
 
     text-align: center;
+
+    padding-bottom: 30px;
 }
+
 
 
 .product-card:hover{
 
     transform: translateY(-10px);
-
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 
+
+/*  Product Image  */
 
 .product-card img{
 
     width: 100%;
 
-    height: 280px;
+    height: 300px;
 
     object-fit: cover;
 }
 
 
 
+/*  Product Name  */
+
 .product-card h2{
+
+    color: var(--dark-brown);
 
     margin-top: 20px;
 
-    font-size: 24px;
-
-    color: var(--dark-brown);
+    font-size: 28px;
 }
 
 
+
+/* Description */
 
 .product-card p{
 
-    padding: 10px 20px;
-
     color: var(--brown);
 
-    font-size: 15px;
+    padding: 0 20px;
 
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 
+
+/* Price */
 
 .price{
 
     display: block;
 
-    font-size: 22px;
-
-    margin-top: 10px;
-
-    margin-bottom: 15px;
+    font-size: 26px;
 
     color: var(--gold);
+
+    margin: 20px 0;
 
     font-weight: bold;
 }
 
 
 
+/* Details Button */
+
 .details-btn{
 
-    background-color: var(--brown);
+    background-color: var(--dark-brown);
 
     color: white;
 
     border: none;
 
-    padding: 12px 25px;
+    padding: 14px 28px;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    transition: 0.3s;
+}
+
+
+
+.details-btn:hover{
+
+    background-color: var(--brown);
+
+    transform: scale(1.05);
+}
+
+
+
+/* DETAILS PAGE */
+
+.details-page{
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 80px 10%;
+
+    min-height: 80vh;
+
+    background-color: var(--cream);
+
+    flex-wrap: wrap;
+}
+
+
+
+/*  Product Image */
+
+.product-image img{
+
+    width: 420px;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    transition: 0.4s;
+}
+
+
+
+.product-image img:hover{
+
+    transform: scale(1.03);
+}
+
+
+
+/* Product Info */
+
+.product-info{
+
+    max-width: 500px;
+}
+
+
+
+/* Product Title */
+
+.product-info h1{
+
+    font-size: 48px;
 
     margin-bottom: 25px;
+
+    color: var(--dark-brown);
+}
+
+
+
+/*  Description  */
+
+.details-description{
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    color: var(--brown);
+
+    margin-bottom: 30px;
+}
+
+
+
+/* ===== Price ===== */
+
+.product-info h2{
+
+    font-size: 35px;
+
+    margin-bottom: 30px;
+
+    color: var(--gold);
+}
+
+
+
+/* ===== Image Buttons ===== */
+
+.color-buttons{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    margin-bottom: 35px;
+}
+
+
+
+.color-buttons button{
+
+    background-color: var(--beige);
+
+    border: none;
+
+    padding: 12px 20px;
 
     border-radius: 30px;
 
@@ -170,106 +309,37 @@ body{
 
     transition: 0.3s;
 
-    font-size: 15px;
+    color: var(--dark-brown);
+
+    font-weight: bold;
 }
 
 
 
-.details-btn:hover{
+.color-buttons button:hover{
+
+    background-color: var(--gold);
+
+    color: white;
+}
+
+
+
+/* ===== Main Button ===== */
+
+.collection-btn{
 
     background-color: var(--dark-brown);
-}
-
-
-
-.details-container{
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 60px 20px;
-
-    text-align: center;
-}
-
-
-
-.details-container img{
-
-    width: 350px;
-
-    border-radius: 20px;
-
-    margin-bottom: 30px;
-
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-
-
-.details-container h1{
-
-    font-size: 40px;
-
-    margin-bottom: 20px;
-
-    color: var(--dark-brown);
-}
-
-
-
-.details-container p{
-
-    max-width: 700px;
-
-    line-height: 1.8;
-
-    font-size: 18px;
-
-    color: var(--brown);
-
-    margin-bottom: 25px;
-}
-
-
-
-.details-container h3{
-
-    font-size: 30px;
-
-    color: var(--gold);
-
-    margin-bottom: 20px;
-}
-
-
-
-.color-buttons{
-
-    display: flex;
-
-    gap: 15px;
-
-    margin-top: 20px;
-}
-
-
-.color-buttons button{
-
-    background-color: var(--brown);
 
     color: white;
 
     border: none;
 
-    padding: 10px 20px;
+    padding: 15px 35px;
 
-    border-radius: 20px;
+    border-radius: 40px;
+
+    font-size: 16px;
 
     cursor: pointer;
 
@@ -277,34 +347,43 @@ body{
 }
 
 
-.color-buttons button:hover{
 
-    background-color: var(--dark-brown);
+.collection-btn:hover{
+
+    background-color: var(--brown);
+
+    transform: translateY(-3px);
 }
 
 
-/* ===== Responsive ===== */
 
-@media(max-width: 768px){
+/* =======================================================
+RESPONSIVE
+======================================================= */
 
-    .products-container{
+@media(max-width: 900px){
+
+    .details-page{
 
         flex-direction: column;
 
-        align-items: center;
+        text-align: center;
     }
 
-    .product-card{
+
+    .product-image img{
 
         width: 90%;
     }
 
-    .details-container img{
 
-        width: 90%;
+    .product-info h1{
+
+        font-size: 38px;
     }
 
-    .page-title{
+
+    .section-title{
 
         font-size: 35px;
     }

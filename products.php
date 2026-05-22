@@ -19,27 +19,36 @@
 
     <!-- Ring -->
 
-    <div class="product-card">
+<div class="product-card">
 
-        <img src="images/ring.jpg" alt="Diamond Ring">
+    <img src="images/ring.jpg" alt="Divas Dream Ring">
 
-        <h2>Diamond Ring</h2>
 
-        <p>
-            Elegant diamond ring with luxury modern style.
-        </p>
+    <h2>Divas Dream Ring</h2>
 
-        <span class="price">$250</span>
 
-        <a href="details/ring.php">
+    <p>
 
-            <button class="details-btn">
-                View Details
-            </button>
+        Elegant luxury ring inspired by timeless
+        Italian jewelry craftsmanship.
 
-        </a>
+    </p>
 
-    </div>
+
+    <span class="price">$250</span>
+
+
+    <a href="details/ring.php">
+
+        <button class="details-btn">
+
+            View Details
+
+        </button>
+
+    </a>
+
+</div>
 
 
 
