@@ -42,6 +42,28 @@
 
         <button class="details-btn">
 
+        
+<!-- Ring -->
+
+<div class="product-card">
+
+    <img src="images/ring1.jpg" alt="Divas Dream Ring">
+
+    <h2>Divas Dream Ring</h2>
+
+    <p>
+
+        Elegant luxury ring inspired by timeless
+        Italian jewelry craftsmanship and Roman beauty.
+
+    </p>
+
+    <span class="price">19,300 SAR</span>
+
+    <a href="details/ring.php">
+
+        <button class="details-btn">
+
             View Details
 
         </button>
@@ -135,6 +157,7 @@
 <?php include 'includes/footer.php'; ?>
 
 <script src="js/product.js"></script>
+
 
 </body>
 </html>
