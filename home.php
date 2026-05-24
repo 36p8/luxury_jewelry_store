@@ -18,10 +18,10 @@
     </div>
 
     <div class="hero-images">
-        <img src="images/home1.jpg" alt="">
-        <img src="images/home2.jpg" alt="">
-        <img src="images/home3.jpg" alt="">
-        <img src="images/home4.jpg" alt="">
+        <img src="images/home1.jpg">
+        <img src="images/home2.jpg">
+        <img src="images/home3.jpg">
+        <img src="images/home4.jpg">
     </div>
 
 </section>

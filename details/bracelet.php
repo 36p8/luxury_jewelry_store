@@ -1,48 +1,59 @@
-<?php include '../includes/header.php'; ?>
-
-<link rel="stylesheet" href="../css/products.css">
-
+<?php
+// details/bracelet.php
+?>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>سوار ديفاز دريم</title>
+    <link rel="stylesheet" href="../css/products.css">
+</head>
 <body>
 
-<?php include '../includes/navbar.php'; ?>
+<header class="main-header">
+    <h1 class="logo">نوثة ساطعة</h1>
+    <nav class="main-nav">
+        <a href="../home.php">الرئيسية</a>
+        <a href="../products.php" class="active">المنتجات</a>
+    </nav>
+</header>
 
+<section class="details-page">
 
-<div class="details-container">
-
-    <img id="mainImage" src="../images/bracelet.jpg" alt="Bracelet">
-
-
-    <h1>Luxury Bracelet</h1>
-
-
-    <p>
-        Handcrafted bracelet designed with elegant luxury aesthetics
-        suitable for modern fashion lovers.
-    </p>
-
-
-    <h3>$180</h3>
-
-
-
-    <div class="color-buttons">
-
-        <button onclick="changeImage('../images/bracelet.jpg')">
-            Brown Gold
-        </button>
-
-        <button onclick="changeImage('../images/bracelet2.jpg')">
-            Rose Gold
-        </button>
-
+    <div class="product-image">
+        <img id="main-image" src="../images/bracelet1.jpg" alt="سوار ديفاز دريم">
     </div>
 
-</div>
+    <div class="product-info">
+        <h1>سوار ديفاز دريم</h1>
 
+        <p class="details-description">
+            سوار فاخر من الذهب الوردي عيار 18 قيراطاً، مرصّع بعرق اللؤلؤ والألماس،
+            بتصميم مروحي يلتف حول المعصم بإحساس أنثوي ناعم.
+        </p>
 
-<?php include '../includes/footer.php'; ?>
+        <h2>35,400 ر.س</h2>
 
+        <div class="color-buttons">
+            <button onclick="changeImage('../images/bracelet1.jpg')">الواجهة</button>
+            <button onclick="changeImage('../images/bracelet2.jpg')">الجانب</button>
+            <button onclick="changeImage('../images/bracelet3.jpg')">الإطلالة</button>
+            <button onclick="changeImage('../images/bracelet4.jpg')">الكاملة</button>
+        </div>
+
+        <button class="collection-btn" onclick="addToMix('سوار ديفاز دريم')">
+            أضف إلى مجموعة التنسيق
+        </button>
+    </div>
+
+</section>
+
+<footer class="main-footer">
+    <p>© 2025 نوثة ساطعة – مشروع تجريبي لمادة تطوير الويب.</p>
+</footer>
+
+<script src="../js/product.js"></script>
 <script src="../js/interaction.js"></script>
-
 </body>
 </html>
+

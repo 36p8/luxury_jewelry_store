@@ -1,163 +1,90 @@
-<?php include 'includes/header.php'; ?>
-
-<link rel="stylesheet" href="css/products.css">
-
+<?php
+// products.php
+?>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مجموعة المجوهرات</title>
+    <link rel="stylesheet" href="css/products.css">
+</head>
 <body>
 
-<?php include 'includes/navbar.php'; ?>
+<header class="main-header">
+    <h1 class="logo">نوثة ساطعة</h1>
+    <nav class="main-nav">
+        <a href="home.php">الرئيسية</a>
+        <a href="products.php" class="active">المنتجات</a>
+        <a href="#">من نحن</a>
+        <a href="#">تواصل معنا</a>
+    </nav>
+</header>
 
+<section class="products-header">
+    <h2>مجموعة المجوهرات</h2>
+    <p>استعرضي تشكيلتنا الراقية من مجوهرات ديفاز دريم، واختاري القطعة التي تعبّر عنك.</p>
+</section>
 
-<h1 class="page-title">Luxury Jewelry Collection</h1>
-
-<p class="page-subtitle">
-    Explore our elegant handmade jewelry pieces
-</p>
-
+<section class="filter-bar">
+    <button class="filter-btn active" data-category="all">جميع المنتجات</button>
+    <button class="filter-btn" data-category="rings">الخواتم</button>
+    <button class="filter-btn" data-category="necklaces">العقود</button>
+    <button class="filter-btn" data-category="bracelets">الأساور</button>
+    <button class="filter-btn" data-category="earrings">الأقراط</button>
+</section>
 
 <section class="products-container">
 
-
-    <!-- Ring -->
-
-<div class="product-card">
-
-    <img src="images/ring.jpg" alt="Divas Dream Ring">
-
-
-    <h2>Divas Dream Ring</h2>
-
-
-    <p>
-
-        Elegant luxury ring inspired by timeless
-        Italian jewelry craftsmanship.
-
-    </p>
-
-
-    <span class="price">$250</span>
-
-
-    <a href="details/ring.php">
-
-        <button class="details-btn">
-
-        
-<!-- Ring -->
-
-<div class="product-card">
-
-    <img src="images/ring1.jpg" alt="Divas Dream Ring">
-
-    <h2>Divas Dream Ring</h2>
-
-    <p>
-
-        Elegant luxury ring inspired by timeless
-        Italian jewelry craftsmanship and Roman beauty.
-
-    </p>
-
-    <span class="price">19,300 SAR</span>
-
-    <a href="details/ring.php">
-
-        <button class="details-btn">
-
-            View Details
-
-        </button>
-
-    </a>
-
-</div>
-
-
-
-    <!-- Necklace -->
-
-    <div class="product-card">
-
-        <img src="images/necklace.jpg" alt="Necklace">
-
-        <h2>Golden Necklace</h2>
-
-        <p>
-            Luxury gold necklace designed for special moments.
-        </p>
-
-        <span class="price">$320</span>
-
-        <a href="details/necklace.php">
-
-            <button class="details-btn">
-                View Details
-            </button>
-
-        </a>
-
-    </div>
-
-
-
-    <!-- Bracelet -->
-
-    <div class="product-card">
-
-        <img src="images/bracelet.jpg" alt="Bracelet">
-
-        <h2>Luxury Bracelet</h2>
-
-        <p>
-            Elegant bracelet with premium handcrafted details.
-        </p>
-
-        <span class="price">$180</span>
-
-        <a href="details/bracelet.php">
-
-            <button class="details-btn">
-                View Details
-            </button>
-
-        </a>
-
-    </div>
-
-
-
-    <!-- Earrings -->
-
-    <div class="product-card">
-
-        <img src="images/earrings.jpg" alt="Earrings">
-
-        <h2>Classic Earrings</h2>
-
-        <p>
-            Stylish earrings inspired by modern luxury fashion.
-        </p>
-
-        <span class="price">$210</span>
-
-        <a href="details/earrings.php">
-
-            <button class="details-btn">
-                View Details
-            </button>
-
-        </a>
-
-    </div>
+    <!-- خاتم -->
+    <article class="product-card" data-category="rings">
+        <img src="images/ring1.jpg" alt="خاتم ديفاز دريم">
+        <h3>خاتم ديفاز دريم</h3>
+        <p>خاتم فاخر من الذهب الوردي عيار 18 قيراطاً، مرصّع بعرق اللؤلؤ والألماس.</p>
+        <span class="price">19,300 ر.س</span>
+        <a href="details/ring.php" class="details-btn">عرض التفاصيل</a>
+    </article>
+
+    <!-- عقد -->
+    <article class="product-card" data-category="necklaces">
+        <img src="images/necklace1.jpg" alt="عقد ديفاز دريم">
+        <h3>عقد ديفاز دريم</h3>
+        <p>عقد أنيق من الذهب الوردي، مستوحى من الفسيفساء الإيطالية الكلاسيكية.</p>
+        <span class="price">16,000 ر.س</span>
+        <a href="details/necklace.php" class="details-btn">عرض التفاصيل</a>
+    </article>
+
+    <!-- سوار -->
+    <article class="product-card" data-category="bracelets">
+        <img src="images/bracelet1.jpg" alt="سوار ديفاز دريم">
+        <h3>سوار ديفاز دريم</h3>
+        <p>سوار فاخر مرصّع بعرق اللؤلؤ والألماس، بتصميم مروحي أنيق.</p>
+        <span class="price">35,400 ر.س</span>
+        <a href="details/bracelet.php" class="details-btn">عرض التفاصيل</a>
+    </article>
+
+    <!-- قرط -->
+    <article class="product-card" data-category="earrings">
+        <img src="images/earring1.jpg" alt="قرط ديفاز دريم">
+        <h3>قرط ديفاز دريم</h3>
+        <p>قرط مروحي من الذهب الوردي، مرصّع بالألماس لإطلالة لامعة.</p>
+        <span class="price">4,930 ر.س</span>
+        <a href="details/earrings.php" class="details-btn">عرض التفاصيل</a>
+    </article>
 
 </section>
 
+<section class="mix-match-panel">
+    <h2>Mix & Match</h2>
+    <p>اختاري القطع التي ترغبين بتنسيقها معاً:</p>
+    <ul id="mix-list"></ul>
+</section>
 
-
-<?php include 'includes/footer.php'; ?>
+<footer class="main-footer">
+    <p>© 2025 نوثة ساطعة – مشروع تجريبي لمادة تطوير الويب.</p>
+</footer>
 
 <script src="js/product.js"></script>
-
-
+<script src="js/interaction.js"></script>
 </body>
 </html>
+
