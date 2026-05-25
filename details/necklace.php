@@ -1,59 +1,99 @@
-<?php
-// details/necklace.php
-?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>عقد ديفاز دريم</title>
-    <link rel="stylesheet" href="../css/products.css">
-</head>
-<body>
 
-<header class="main-header">
-    <h1 class="logo">نوثة ساطعة</h1>
-    <nav class="main-nav">
-        <a href="../home.php">الرئيسية</a>
-        <a href="../products.php" class="active">المنتجات</a>
-    </nav>
-</header>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Necklace Details</title>
+
+    <link rel="stylesheet" href="../css/products.css">
+
+</head>
+
+<body>
 
 <section class="details-page">
 
-    <div class="product-image">
-        <img id="main-image" src="../images/necklace1.jpg" alt="عقد ديفاز دريم">
-    </div>
+    <div class="details-container">
 
-    <div class="product-info">
-        <h1>عقد ديفاز دريم</h1>
+        <div class="gallery">
 
-        <p class="details-description">
-            عقد فاخر من الذهب الوردي عيار 18 قيراطاً، مرصّع بالألماس وعرق اللؤلؤ،
-            بتصميم أنثوي ناعم ينساب حول العنق بإطلالة راقية.
-        </p>
+            <img id="mainImage" src="../images/necklace1.jpg" class="main-image">
 
-        <h2>16,000 ر.س</h2>
+            <div class="small-images">
 
-        <div class="color-buttons">
-            <button onclick="changeImage('../images/necklace1.jpg')">الواجهة</button>
-            <button onclick="changeImage('../images/necklace2.jpg')">الجانب</button>
-            <button onclick="changeImage('../images/necklace3.jpg')">الإطلالة</button>
-            <button onclick="changeImage('../images/necklace4.jpg')">الكاملة</button>
+                <img src="../images/necklace1.jpg" onclick="changeImage(this)">
+                <img src="../images/necklace2.jpg" onclick="changeImage(this)">
+                <img src="../images/necklace3.jpg" onclick="changeImage(this)">
+                <img src="../images/necklace4.jpg" onclick="changeImage(this)">
+
+            </div>
+
         </div>
 
-        <button class="collection-btn" onclick="addToMix('عقد ديفاز دريم')">
-            أضف إلى مجموعة التنسيق
-        </button>
+        <div class="details-content">
+
+            <h1>" ديفاز دريم " عقد</h1>
+
+            <h2>16,000 SAR شامل الضرائب</h2>
+
+            <p>
+                عقد قلادة " ديفاز دريم " من الذهب الوردي عيار 18 قيراطًا مرصع بالألماس وعرق اللؤلؤ.
+            </p>
+
+            <div class="buttons">
+
+                <button>إضافة إلى حقيبة التسوق</button>
+                <button>إضافة إلى المفضلة</button>
+
+            </div>
+
+            <h3>الوصف</h3>
+
+            <p>
+                يضفي عقد ديفاز دريم روحاً رومانية لا لبس فيها على أكثر الديفات سحراً وجمالاً.
+            </p>
+
+            <h3>الألوان</h3>
+
+            <div class="colors">
+
+                <span class="white"></span>
+                <span class="gold"></span>
+                <span class="rose"></span>
+
+            </div>
+
+            <h3>التفاصيل</h3>
+
+            <ul>
+
+                <li>المرجع : 358365</li>
+                <li>المادة : ذهب وردي</li>
+                <li>ألماس : 0.13</li>
+                <li>الحجر الكريم : ألماس، الصدف</li>
+                <li>اللون : أبيض</li>
+                <li>الطول : 41-43 cm</li>
+
+            </ul>
+
+        </div>
+
     </div>
 
 </section>
 
-<footer class="main-footer">
-    <p>© 2025 نوثة ساطعة – مشروع تجريبي لمادة تطوير الويب.</p>
-</footer>
+<script>
 
-<script src="../js/product.js"></script>
-<script src="../js/interaction.js"></script>
+function changeImage(element){
+
+    document.getElementById("mainImage").src = element.src;
+
+}
+
+</script>
+
 </body>
 </html>
-

@@ -1,59 +1,99 @@
-<?php
-// details/ring.php
-?>
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>خاتم ديفاز دريم</title>
-    <link rel="stylesheet" href="../css/products.css">
-</head>
-<body>
 
-<header class="main-header">
-    <h1 class="logo">نوثة ساطعة</h1>
-    <nav class="main-nav">
-        <a href="../home.php">الرئيسية</a>
-        <a href="../products.php" class="active">المنتجات</a>
-    </nav>
-</header>
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ring Details</title>
+
+    <link rel="stylesheet" href="../css/products.css">
+
+</head>
+
+<body>
 
 <section class="details-page">
 
-    <div class="product-image">
-        <img id="main-image" src="../images/ring1.jpg" alt="خاتم ديفاز دريم">
-    </div>
+    <div class="details-container">
 
-    <div class="product-info">
-        <h1>خاتم ديفاز دريم</h1>
+        <div class="gallery">
 
-        <p class="details-description">
-            خاتم فاخر من الذهب الوردي عيار 18 قيراطاً، مرصّع بعرق اللؤلؤ والألماس،
-            بتصميم مروحي مستوحى من الفسيفساء الإيطالية الراقية.
-        </p>
+            <img id="mainImage" src="../images/ring1.jpg" class="main-image">
 
-        <h2>19,300 ر.س</h2>
+            <div class="small-images">
 
-        <div class="color-buttons">
-            <button onclick="changeImage('../images/ring1.jpg')">الواجهة</button>
-            <button onclick="changeImage('../images/ring2.jpg')">الجانب</button>
-            <button onclick="changeImage('../images/ring3.jpg')">الإطلالة</button>
-            <button onclick="changeImage('../images/ring4.jpg')">الكاملة</button>
+                <img src="../images/ring1.jpg" onclick="changeImage(this)">
+                <img src="../images/ring2.jpg" onclick="changeImage(this)">
+                <img src="../images/ring3.jpg" onclick="changeImage(this)">
+                <img src="../images/ring4.jpg" onclick="changeImage(this)">
+
+            </div>
+
         </div>
 
-        <button class="collection-btn" onclick="addToMix('خاتم ديفاز دريم')">
-            أضف إلى مجموعة التنسيق
-        </button>
+        <div class="details-content">
+
+            <h1>" ديفاز دريم " خاتم</h1>
+
+            <h2>12,500 SAR شامل الضرائب</h2>
+
+            <p>
+                خاتم " ديفاز دريم" متعاكس وصغير من الذهب الوردي عيار 18 قيراطًا، مرصع بأجزاء من عرق اللؤلؤ وألماس مرصوف.
+            </p>
+
+            <div class="buttons">
+
+                <button>إضافة إلى حقيبة التسوق</button>
+                <button>إضافة إلى المفضلة</button>
+
+            </div>
+
+            <h3>الوصف</h3>
+
+            <p>
+                يضفي خاتم " ديفاز دريم " المستوحى من الأناقة الأنثوية والجذابة الساحرة للمدينة الخالدة، روحًا رومانية لا لبس فيها على أكثر النجمات سحرًا وجمالًا.
+            </p>
+
+            <h3>الألوان</h3>
+
+            <div class="colors">
+
+                <span class="white"></span>
+                <span class="gold"></span>
+                <span class="rose"></span>
+
+            </div>
+
+            <h3>التفاصيل</h3>
+
+            <ul>
+
+                <li>المرجع : 353806</li>
+                <li>المادة : ذهب وردي</li>
+                <li>ألماس : 0.08</li>
+                <li>الحجر الكريم : ألماس، الصدف</li>
+                <li>اللون : أبيض</li>
+                <li>صنع في : إيطاليا</li>
+
+            </ul>
+
+        </div>
+
     </div>
 
 </section>
 
-<footer class="main-footer">
-    <p>© 2025 نوثة ساطعة – مشروع تجريبي لمادة تطوير الويب.</p>
-</footer>
+<script>
 
-<script src="../js/product.js"></script>
-<script src="../js/interaction.js"></script>
+function changeImage(element){
+
+    document.getElementById("mainImage").src = element.src;
+
+}
+
+</script>
+
 </body>
 </html>
-

@@ -1,90 +1,146 @@
-<?php
-// products.php
-?>
+<?php include 'includes/header.php'; ?>
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>مجموعة المجوهرات</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Jewelry - Products</title>
+
     <link rel="stylesheet" href="css/products.css">
+
+    <script>
+        function filterProducts(category) {
+
+            let cards = document.querySelectorAll(".product-card");
+
+            cards.forEach(card => {
+
+                if(category === "all"){
+                    card.style.display = "block";
+                }
+
+                else if(card.classList.contains(category)){
+                    card.style.display = "block";
+                }
+
+                else{
+                    card.style.display = "none";
+                }
+
+            });
+
+        }
+    </script>
+
 </head>
+
 <body>
 
-<header class="main-header">
-    <h1 class="logo">نوثة ساطعة</h1>
-    <nav class="main-nav">
-        <a href="home.php">الرئيسية</a>
-        <a href="products.php" class="active">المنتجات</a>
-        <a href="#">من نحن</a>
-        <a href="#">تواصل معنا</a>
-    </nav>
-</header>
+<section class="products-page">
 
-<section class="products-header">
-    <h2>مجموعة المجوهرات</h2>
-    <p>استعرضي تشكيلتنا الراقية من مجوهرات ديفاز دريم، واختاري القطعة التي تعبّر عنك.</p>
+    <h1 class="main-title">مجموعة ديفاز دريم الفاخرة</h1>
+
+    <div class="filter-buttons">
+
+        <button onclick="filterProducts('all')">الكل</button>
+        <button onclick="filterProducts('ring')">الخواتم</button>
+        <button onclick="filterProducts('necklace')">العقود</button>
+        <button onclick="filterProducts('bracelet')">الأساور</button>
+        <button onclick="filterProducts('earrings')">الأقراط</button>
+
+    </div>
+
+    <div class="products-container">
+
+        <!-- Ring -->
+
+        <div class="product-card ring">
+
+            <img src="images/ring1.jpg" alt="Ring">
+
+            <h2>خاتم ديفاز دريم</h2>
+
+            <p class="price">12,500 SAR</p>
+
+            <p>
+                خاتم فاخر من الذهب الوردي مرصع بالألماس والصدف.
+            </p>
+
+            <a href="details/ring.php" class="details-btn">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- Necklace -->
+
+        <div class="product-card necklace">
+
+            <img src="images/necklace1.jpg" alt="Necklace">
+
+            <h2>عقد ديفاز دريم</h2>
+
+            <p class="price">16,000 SAR</p>
+
+            <p>
+                عقد أنيق مستوحى من الجمال الإيطالي الراقي.
+            </p>
+
+            <a href="details/necklace.php" class="details-btn">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- Bracelet -->
+
+        <div class="product-card bracelet">
+
+            <img src="images/bracelet1.jpg" alt="Bracelet">
+
+            <h2>سوار ديفاز دريم</h2>
+
+            <p class="price">35,400 SAR</p>
+
+            <p>
+                سوار فاخر يعكس الأناقة الإيطالية الخالدة.
+            </p>
+
+            <a href="details/bracelet.php" class="details-btn">
+                Details
+            </a>
+
+        </div>
+
+
+        <!-- Earrings -->
+
+        <div class="product-card earrings">
+
+            <img src="images/earrings1.jpg" alt="Earrings">
+
+            <h2>قرط ديفاز دريم</h2>
+
+            <p class="price">4,930 SAR</p>
+
+            <p>
+                قرط أنيق من الذهب الوردي والألماس.
+            </p>
+
+            <a href="details/earrings.php" class="details-btn">
+                Details
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section class="filter-bar">
-    <button class="filter-btn active" data-category="all">جميع المنتجات</button>
-    <button class="filter-btn" data-category="rings">الخواتم</button>
-    <button class="filter-btn" data-category="necklaces">العقود</button>
-    <button class="filter-btn" data-category="bracelets">الأساور</button>
-    <button class="filter-btn" data-category="earrings">الأقراط</button>
-</section>
+<?php include 'includes/footer.php'; ?>
 
-<section class="products-container">
-
-    <!-- خاتم -->
-    <article class="product-card" data-category="rings">
-        <img src="images/ring1.jpg" alt="خاتم ديفاز دريم">
-        <h3>خاتم ديفاز دريم</h3>
-        <p>خاتم فاخر من الذهب الوردي عيار 18 قيراطاً، مرصّع بعرق اللؤلؤ والألماس.</p>
-        <span class="price">19,300 ر.س</span>
-        <a href="details/ring.php" class="details-btn">عرض التفاصيل</a>
-    </article>
-
-    <!-- عقد -->
-    <article class="product-card" data-category="necklaces">
-        <img src="images/necklace1.jpg" alt="عقد ديفاز دريم">
-        <h3>عقد ديفاز دريم</h3>
-        <p>عقد أنيق من الذهب الوردي، مستوحى من الفسيفساء الإيطالية الكلاسيكية.</p>
-        <span class="price">16,000 ر.س</span>
-        <a href="details/necklace.php" class="details-btn">عرض التفاصيل</a>
-    </article>
-
-    <!-- سوار -->
-    <article class="product-card" data-category="bracelets">
-        <img src="images/bracelet1.jpg" alt="سوار ديفاز دريم">
-        <h3>سوار ديفاز دريم</h3>
-        <p>سوار فاخر مرصّع بعرق اللؤلؤ والألماس، بتصميم مروحي أنيق.</p>
-        <span class="price">35,400 ر.س</span>
-        <a href="details/bracelet.php" class="details-btn">عرض التفاصيل</a>
-    </article>
-
-    <!-- قرط -->
-    <article class="product-card" data-category="earrings">
-        <img src="images/earring1.jpg" alt="قرط ديفاز دريم">
-        <h3>قرط ديفاز دريم</h3>
-        <p>قرط مروحي من الذهب الوردي، مرصّع بالألماس لإطلالة لامعة.</p>
-        <span class="price">4,930 ر.س</span>
-        <a href="details/earrings.php" class="details-btn">عرض التفاصيل</a>
-    </article>
-
-</section>
-
-<section class="mix-match-panel">
-    <h2>Mix & Match</h2>
-    <p>اختاري القطع التي ترغبين بتنسيقها معاً:</p>
-    <ul id="mix-list"></ul>
-</section>
-
-<footer class="main-footer">
-    <p>© 2025 نوثة ساطعة – مشروع تجريبي لمادة تطوير الويب.</p>
-</footer>
-
-<script src="js/product.js"></script>
-<script src="js/interaction.js"></script>
 </body>
 </html>
-
