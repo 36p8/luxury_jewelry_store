@@ -25,19 +25,20 @@
         <h3>تصنيفات مختارة</h3>
     </div>
     <div class="categories-grid">
-        <div class="category-card">
-            <div class="img-container">
-                <img src="images/ring.jpg" alt="Luxury Rings">
-            </div>
-            <h4>خواتم فاخرة</h4>
+    <div class="category-card">
+        <div class="img-container">
+            <img src="home1.jpg.jpg" alt="Luxury Rings">
         </div>
-        <div class="category-card">
-            <div class="img-container">
-                <img src="images/bracelet.jpg" alt="Luxury Bracelets">
-            </div>
-            <h4>أساور راقية</h4>
-        </div>
+        <h4>خواتم فاخرة</h4>
     </div>
+
+    <div class="category-card">
+        <div class="img-container">
+            <img src="home2.jpg.jpg" alt="Luxury Bracelets">
+        </div>
+        <h4>أساور راقية</h4>
+    </div>
+</div>
 </section>
 
 <?php include 'includes/footer.php'; ?>

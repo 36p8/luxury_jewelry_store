@@ -5,19 +5,26 @@
     --brown: #7D5A44;
     --dark-brown: #4A342A;
     --muted-color: #888;
+    
+    /* متغيرات عامة */
     --bg-color: var(--cream);
     --text-color: var(--dark-brown);
     --navbar-bg: #FFFFFF;
     --border-color: var(--beige);
+    --link-color: var(--dark-brown);
+    --btn-bg: var(--brown);
+    --btn-text-color: #ffffff;
     --transition-speed: 0.4s;
 }
 
 [data-theme="dark"] {
-    --bg-color: var(--dark-brown);   
-    --text-color: var(--cream);    
-    --navbar-bg: #35251E;            
-    --border-color: var(--brown);  
-    --gold: #D7C9B8;                
+    --bg-color: var(--dark-brown);
+    --text-color: var(--cream);
+    --navbar-bg: #35251E;
+    --border-color: var(--brown);
+    --link-color: var(--cream);
+    --btn-bg: #A07A65; /* لون أفتح قليلاً للزر في الدارك مود */
+    --btn-text-color: #ffffff;
 }
 
 * {
@@ -25,7 +32,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Cairo', sans-serif;
-    transition: background-color var(--transition-speed), color var(--transition-speed);
+    transition: background-color var(--transition-speed), color var(--transition-speed), border-color var(--transition-speed);
 }
 
 body {
@@ -38,13 +45,14 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--link-color);
 }
 
 .luxury-btn {
     display: inline-block;
-    background-color: var(--brown);
-    color: #fff;
-    border: 1px solid var(--brown);
+    background-color: var(--btn-bg);
+    color: var(--btn-text-color);
+    border: 1px solid var(--btn-bg);
     padding: 14px 40px;
     font-size: 14px;
     letter-spacing: 2px;
