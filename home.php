@@ -1,30 +1,43 @@
 <?php include 'includes/header.php'; ?>
-<link rel="stylesheet" href="css/products.css">
 <?php include 'includes/navbar.php'; ?>
 
-<section class="home-hero">
-
-    <div class="hero-text">
-        <h1>نوثة ساطعة</h1>
-        <p>
-            رُصِع هذا التصميم المجوهراتي الساحر ذو الشكل الراقي الشهير  
-            برقة متناهية بمختلف الأحجار الكريمة الملونة أو الألماس،  
-            فتبدّى على تصورات مشرقة ليلائم كل الأذواق والشخصيات.
+<!-- قسم الواجهة المحدث -->
+<section class="hero-section">
+    <!-- الصورة ستكون خلفية في الـ CSS الخاص بهذا الكلاس -->
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">أنوثة مشرقة</h1>
+        <p class="hero-subtitle">
+            بفضل تصميمه الأنيق والمميز، تم تزيين هذه المجوهرات الرقيقة بعناية بأحجار كريمة ملوّنة أو ألماس لامع، 
+            لتمنحكِ تصاميم متألقة تناسب كل ذوق وشخصية.
         </p>
-
-        <a href="products.php">
-            <button class="hero-btn">تسوقوا مجوهرات ديفاز دريم</button>
-        </a>
+        <a href="products.php" class="luxury-btn">تسوق من مجموعة Divas' Dream</a>
     </div>
+</section>
 
-    <div class="hero-images">
-        <img src="images/home1.jpg">
-        <img src="images/home2.jpg">
-        <img src="images/home3.jpg">
-        <img src="images/home4.jpg">
+<section class="welcome-section">
+    <h2>إبداعات استثنائية</h2>
+    <p>ادخل عالم الفخامة. كل تصميم يمزج بين الإبداع الإيطالي الجريء وإتقان الأحجار الكريمة، صُنعت يدوياً لأولئك الذين يحددون معنى الرقي الحقيقي.</p>
+</section>
+
+<section class="categories-section">
+    <div class="section-title">
+        <h3>تصنيفات مختارة</h3>
     </div>
-
+    <div class="categories-grid">
+        <div class="category-card">
+            <div class="img-container">
+                <img src="images/ring.jpg" alt="Luxury Rings">
+            </div>
+            <h4>خواتم فاخرة</h4>
+        </div>
+        <div class="category-card">
+            <div class="img-container">
+                <img src="images/bracelet.jpg" alt="Luxury Bracelets">
+            </div>
+            <h4>أساور راقية</h4>
+        </div>
+    </div>
 </section>
 
 <?php include 'includes/footer.php'; ?>
-<script src="js/interaction.js"></script>
