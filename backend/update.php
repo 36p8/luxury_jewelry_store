@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($id && !empty($new_name) && !empty($new_price)) {
         try {
-            // استخدام الـ Prepared Statement لحماية عملية التحديث
+
             $sql = "UPDATE products SET name = :name, price = :price WHERE id = :id";
             $stmt = $pdo->prepare($sql);
             
