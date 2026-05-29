@@ -1,47 +1,56 @@
 <?php 
-include 'includes/header.php'; 
-include 'includes/navbar.php'; 
-session_start(); 
+session_start();
+if(isset($_SESSION['user_id'])) {
+    header("Location: home.php");
+    exit();
+}
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Luxury Jewelry</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
 
-<link rel="stylesheet" href="css/login.css">
+    <?php include 'includes/navbar.php'; ?>
 
-<div class="auth-container">
-    <div class="auth-card">
+    <div class="auth-container" style="margin: 80px auto;">
         <h2>Create Account</h2>
-        <p class="auth-subtitle">Join our luxury jewelry store</p>
 
         <?php if(isset($_SESSION['error'])): ?>
-            <div class="error-msg"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
+            <div class="alert alert-danger"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
         <?php endif; ?>
 
         <form action="backend/register_process.php" method="POST">
             <div class="form-group">
-                <label>Username</label>
-                <input type="text" name="username" required placeholder="Enter your username">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
             </div>
-            
             <div class="form-group">
-                <label>Email Address</label>
-                <input type="email" name="email" required placeholder="Enter your email">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
             </div>
-
             <div class="form-group">
-                <label>Password</label>
-                <input type="password" name="password" required placeholder="Create a password">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
             </div>
-
             <div class="form-group">
-                <label>Confirm Password</label>
-                <input type="password" name="confirm_password" required placeholder="Confirm your password">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
             </div>
-
-            <button type="submit" class="auth-btn">Register</button>
+            <button type="submit" name="register_submit" class="auth-btn">Register</button>
         </form>
-        <p class="auth-footer">Already have an account? <a href="login.php">Login here</a></p>
-    </div>
-</div>
 
-<?php 
-include 'includes/footer.php'; 
-?>
+        <div class="auth-links">
+            <p>Already have an account? <a href="login.php">Login Here</a></p>
+        </div>
+    </div>
+
+    <?php include 'includes/footer.php'; ?>
+
+</body>
+</html>
