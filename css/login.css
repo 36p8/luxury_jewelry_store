@@ -1,12 +1,13 @@
-/* تنسيق خاص بحاوية تسجيل الدخول فقط لمنع التعارض مع البنت الأولى */
+/* تنسيق خاص بحاوية تسجيل الدخول لمنع التعارض */
 .auth-wrapper {
     display: flex;
+    flex-direction: column; /* جعل العناصر تترتب عمودياً لتنسيق النافبار */
     justify-content: center;
     align-items: center;
-    min-height: 70vh; /* يعطي مساحة مريحة بين النافبار والفوتر */
+    min-height: 75vh;
     padding: 20px;
     box-sizing: border-box;
-    background-color: #f9f6f0; /* لون الخلفية الكريمي الفخم للموقع */
+    background-color: #f9f6f0;
 }
 
 .auth-container {
@@ -15,9 +16,18 @@
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     width: 100%;
-    max-width: 420px;
-    border-top: 4px solid #c5a880; /* اللون الذهبي حقكم */
+    max-width: 420px; /* مقاس المربع الفخم */
+    border-top: 4px solid #c5a880;
     box-sizing: border-box;
+}
+
+/* 1️⃣ تعديل وربط مقاس الـ Navbar بمقاس المربع */
+body nav, .navbar, header nav { 
+    width: 100% !important;
+    max-width: 420px !important; /* نفس مقاس المربع تماماً */
+    margin: 0 auto 20px auto !important; /* يتوسط الشاشة ويترك مسافة للمربع تحت */
+    border-radius: 8px !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02) !important;
 }
 
 .auth-container h2 {
@@ -46,13 +56,7 @@
     border-radius: 4px;
     font-size: 14px;
     box-sizing: border-box;
-    transition: border-color 0.3s;
     text-align: right;
-}
-
-.form-group input:focus {
-    border-color: #c5a880;
-    outline: none;
 }
 
 .auth-btn {
@@ -64,43 +68,38 @@
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-.auth-btn:hover {
-    background-color: #a3855c;
-}
-
-.auth-links {
+/* 2️⃣ حل مشكلة الخط في الـ Dark Mode */
+.auth-links, .auth-links p {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
+    color: #555555 !important; /* لون واضح في المود العادي */
+}
+
+/* إذا كان الموقع يدعم الدارك مود عبر كلاس dark في الـ body */
+body.dark .auth-links, 
+body.dark .auth-links p,
+[data-theme="dark"] .auth-links,
+[data-theme="dark"] .auth-links p {
+    color: #e0e0e0 !important; /* يتحول للون أبيض ناصع وواضح جداً في الدارك مود */
 }
 
 .auth-links a {
-    color: #a3855c;
+    color: #a3855c !important;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .auth-links a:hover {
     text-decoration: underline;
 }
 
-/* التنبيهات */
 .alert {
     padding: 12px;
     border-radius: 4px;
     margin-bottom: 20px;
     font-size: 14px;
     text-align: center;
-}
-.alert-danger {
-    background-color: #fce8e6;
-    color: #cc3333;
-    border: 1px solid #f5c2c2;
-}
-.alert-success {
-    background-color: #e6f4ea;
-    color: #137333;
-    border: 1px solid #c1e7c4;
 }
