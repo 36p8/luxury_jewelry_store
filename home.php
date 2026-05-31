@@ -1,9 +1,9 @@
 <?php include 'includes/header.php'; ?>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 <?php include 'includes/navbar.php'; ?>
 
-<!-- قسم الواجهة المحدث -->
 <section class="hero-section">
-    <!-- الصورة ستكون خلفية في الـ CSS الخاص بهذا الكلاس -->
     <div class="hero-overlay"></div>
     <div class="hero-content">
         <h1 class="hero-title">أنوثة مشرقة</h1>
@@ -42,4 +42,5 @@
 
     </div>
 </section>
-<?php include 'includes/footer.php'; ?>
+
+<?php include 'includes/footer.php'; ?>                   

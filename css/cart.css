@@ -1,0 +1,28 @@
+.cart-link {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
+
+.cart-link:hover {
+    color: #c5a880; /* تأثير ذهبي خفيف عند تمرير الماوس */
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #c5a880; /* لون العداد */
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+    min-width: 15px;
+    text-align: center;
+}        
