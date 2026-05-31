@@ -17,6 +17,10 @@
 
     <div class="nav-actions" style="display: flex; align-items: center; gap: 20px;">
         
+        <a href="favorites.php" class="fav-link" style="color: var(--text-color); text-decoration: none; font-size: 18px; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;">
+            <i class="fas fa-heart"></i>
+        </a>
+
         <a href="cart.php" class="cart-link" style="color: var(--text-color); text-decoration: none; font-size: 18px; position: relative; display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px;">
             <i class="fas fa-shopping-cart"></i> 
             <span class="cart-count" style="background-color: #bfa38a; color: #1a110b; font-size: 10px; font-weight: bold; border-radius: 50%; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; position: absolute; top: 0; right: 0; font-family: Arial, sans-serif;">
@@ -26,4 +30,4 @@
 
         <button id="theme-toggle" style="background: none; border: none; color: var(--text-color); font-size: 18px; cursor: pointer; padding: 0; display: flex; align-items: center;">🌓</button>
     </div>
-</nav>      
+</nav>
