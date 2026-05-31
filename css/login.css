@@ -1,11 +1,12 @@
-/* تنسيق خاص بحاوية تسجيل الدخول لمنع التعارض */
+/* تنسيق حاوية تسجيل الدخول */
 .auth-wrapper {
     display: flex;
-    flex-direction: column; /* جعل العناصر تترتب عمودياً لتنسيق النافبار */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 75vh;
     padding: 20px;
+    padding-top: 100px; /* مسافة لضمان عدم تداخل المربع مع الـ Navbar */
     box-sizing: border-box;
     background-color: #f9f6f0;
 }
@@ -16,18 +17,9 @@
     border-radius: 8px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.05);
     width: 100%;
-    max-width: 420px; /* مقاس المربع الفخم */
+    max-width: 420px;
     border-top: 4px solid #c5a880;
     box-sizing: border-box;
-}
-
-/* 1️⃣ تعديل وربط مقاس الـ Navbar بمقاس المربع */
-body nav, .navbar, header nav { 
-    width: 100% !important;
-    max-width: 420px !important; /* نفس مقاس المربع تماماً */
-    margin: 0 auto 20px auto !important; /* يتوسط الشاشة ويترك مسافة للمربع تحت */
-    border-radius: 8px !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02) !important;
 }
 
 .auth-container h2 {
@@ -70,20 +62,11 @@ body nav, .navbar, header nav {
     cursor: pointer;
 }
 
-/* 2️⃣ حل مشكلة الخط في الـ Dark Mode */
 .auth-links, .auth-links p {
     text-align: center;
     margin-top: 20px;
     font-size: 14px;
-    color: #555555 !important; /* لون واضح في المود العادي */
-}
-
-/* إذا كان الموقع يدعم الدارك مود عبر كلاس dark في الـ body */
-body.dark .auth-links, 
-body.dark .auth-links p,
-[data-theme="dark"] .auth-links,
-[data-theme="dark"] .auth-links p {
-    color: #e0e0e0 !important; /* يتحول للون أبيض ناصع وواضح جداً في الدارك مود */
+    color: #555555 !important;
 }
 
 .auth-links a {
