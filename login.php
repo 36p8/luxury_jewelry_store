@@ -28,7 +28,7 @@ if(isset($_SESSION['user_id'])) {
                 <div class="alert alert-success"><?php echo $_SESSION['success']; unset($_SESSION['success']); ?></div>
             <?php endif; ?>
 
-            <form action="backend/login_process.php" method="POST">
+            <form id="loginForm" action="backend/login_process.php" method="POST">
                 <div class="form-group">
                     <label for="email">البريد الإلكتروني</label>
                     <input type="email" id="email" name="email" required>
@@ -47,6 +47,8 @@ if(isset($_SESSION['user_id'])) {
     </div>
 
     <?php include 'includes/footer.php'; ?>
+    
+    <script src="js/validation.js"></script>
 
 </body>
 </html>

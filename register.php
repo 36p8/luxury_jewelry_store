@@ -26,7 +26,7 @@ if(isset($_SESSION['user_id'])) {
                 <div class="alert alert-danger"><?php echo $_SESSION['error']; unset($_SESSION['error']); ?></div>
             <?php endif; ?>
 
-            <form action="backend/register_process.php" method="POST">
+            <form id="registerForm" action="backend/register_process.php" method="POST">
                 <div class="form-group">
                     <label for="username">اسم المستخدم</label>
                     <input type="text" id="username" name="username" required>
@@ -53,6 +53,8 @@ if(isset($_SESSION['user_id'])) {
     </div>
 
     <?php include 'includes/footer.php'; ?>
+
+    <script src="js/validation.js"></script>
 
 </body>
 </html>
