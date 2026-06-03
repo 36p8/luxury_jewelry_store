@@ -151,4 +151,4 @@ function filterProducts(category){
 </section>
 
 <?php include 'includes/footer.php'; ?>
-```
+
