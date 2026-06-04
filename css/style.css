@@ -73,6 +73,7 @@ a {
 }
 
 .luxury-btn:hover {
+    /* تأثير عند مرور الماوس */
     background-color: transparent;
     color: var(--text-color);
     border-color: var(--text-color);
@@ -81,6 +82,7 @@ a {
  
  
 .gallery-header {
+    /* صندوق ترويسة المعرض */
     text-align: center;
     padding: 60px 20px 40px 20px;
     background-color: transparent;  
@@ -100,6 +102,7 @@ a {
 
  
 .gallery-filter {
+    /* صندوق فلاتر المعرض */
     text-align: center;
     margin: 20px 0 40px 0;
 }
@@ -120,6 +123,7 @@ a {
 
  
 .filter-btn.active, .filter-btn:hover {
+    /* تأثير عند مرور الماوس */
     background-color: var(--brown);  
     border-color: var(--brown);
     color: #ffffff;  
@@ -127,6 +131,7 @@ a {
 
  
 .gallery-grid {
+    /* صندوق شبكة المعرض */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
@@ -137,6 +142,7 @@ a {
 
  
 .gallery-card {
+    /* صندوق بطاقة المعرض */
     background-color: var(--card-bg);
     border-radius: var(--card-radius);
     overflow: hidden;
@@ -160,6 +166,7 @@ a {
 }
 
  .card-overlay {
+    /* صندوق التغطية فوق الصورة */
     position: absolute;
     top: 0;
     left: 0;
@@ -179,10 +186,12 @@ a {
 
  
 .gallery-card:hover .card-img-wrapper img {
+    /* تأثير عند مرور الماوس */
     transform: scale(1.05);  
 }
 
 .gallery-card:hover .card-overlay {
+    /* تأثير عند مرور الماوس */
     opacity: 1; 
 }
 
@@ -202,6 +211,7 @@ a {
 
  
 .gallery-link {
+    /* رابط داخل صندوق المعرض */
     color: var(--dark-brown);
     background-color: var(--cream);  
     text-decoration: none;
@@ -214,7 +224,8 @@ a {
 }
 
 .gallery-link:hover {
+    /* تأثير عند مرور الماوس */
     background-color: transparent;
     color: var(--cream);
     border-color: var(--cream);
-}                       
+}

@@ -1,6 +1,8 @@
+/* إنشاء قاعدة بيانات المتجر إذا لم تكن موجودة */
 CREATE DATABASE IF NOT EXISTS `jewelry_store` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `jewelry_store`;
 
+/* صندوق جدول المستخدمين */
 CREATE TABLE IF NOT EXISTS `users` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `username` VARCHAR(100) NOT NULL,
@@ -8,6 +10,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` VARCHAR(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+/* صندوق جدول المنتجات */
 CREATE TABLE IF NOT EXISTS `products` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(150) NOT NULL,
@@ -16,6 +19,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `description` TEXT NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+/* صندوق جدول رسائل التواصل */
 CREATE TABLE IF NOT EXISTS `contact_messages` (
   `id` INT AUTO_INCREMENT PRIMARY KEY,
   `name` VARCHAR(100) NOT NULL,

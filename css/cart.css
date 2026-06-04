@@ -1,3 +1,4 @@
+/* تنسيق رابط أيقونة العربة */
 .cart-link {
     color: #ffffff;
     text-decoration: none;
@@ -9,10 +10,12 @@
     vertical-align: middle;
 }
 
+/* لون الأيقونة عند تمرير الماوس */
 .cart-link:hover {
     color: #c5a880;  
 }
 
+/* تنسيق عداد المنتجات داخل العربة */
 .cart-count {
     position: absolute;
     top: -8px;
@@ -25,4 +28,4 @@
     padding: 2px 6px;
     min-width: 15px;
     text-align: center;
-}        
+}

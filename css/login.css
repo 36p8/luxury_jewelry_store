@@ -1,4 +1,4 @@
- 
+/* صندوق صفحات الدخول والتسجيل الرئيسي */
 .auth-wrapper {
     display: flex;
     flex-direction: column;
@@ -11,6 +11,7 @@
     background-color: #f9f6f0;
 }
 
+/* صندوق النموذج الأساسي */
 .auth-container {
     background-color: #ffffff;
     padding: 40px;
@@ -22,6 +23,7 @@
     box-sizing: border-box;
 }
 
+/* عنوان النموذج */
 .auth-container h2 {
     text-align: center;
     color: #333333;
@@ -29,6 +31,7 @@
     font-weight: 600;
 }
 
+/* صندوق مجموعة الحقول */
 .form-group {
     margin-bottom: 20px;
     text-align: right;
@@ -51,6 +54,7 @@
     text-align: right;
 }
 
+/* زر الدخول/التسجيل */
 .auth-btn {
     width: 100%;
     padding: 12px;
@@ -62,6 +66,7 @@
     cursor: pointer;
 }
 
+/* روابط الدخول والتسجيل */
 .auth-links, .auth-links p {
     text-align: center;
     margin-top: 20px;
@@ -75,10 +80,12 @@
     font-weight: bold;
 }
 
+/* تأثير عند مرور الماوس على الرابط */
 .auth-links a:hover {
     text-decoration: underline;
 }
 
+/* صندوق رسائل التنبيه والخطأ */
 .alert {
     padding: 12px;
     border-radius: 4px;
