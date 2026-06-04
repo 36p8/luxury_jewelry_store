@@ -50,7 +50,7 @@ function filterProducts(category){
 
     <div class="products-container">
 
-        <!-- Necklace -->
+        
 
         <div class="product-card necklace">
 
@@ -74,7 +74,7 @@ function filterProducts(category){
 
         </div>
 
-        <!-- Bracelet -->
+         
 
         <div class="product-card bracelet">
 
@@ -98,7 +98,7 @@ function filterProducts(category){
 
         </div>
 
-        <!-- Ring -->
+         
 
         <div class="product-card ring">
 
@@ -122,7 +122,7 @@ function filterProducts(category){
 
         </div>
 
-        <!-- Earrings -->
+         
 
         <div class="product-card earrings">
 

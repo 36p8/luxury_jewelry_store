@@ -7,7 +7,7 @@
     <title>Necklace Details</title>
     <link rel="stylesheet" href="../css/products.css">
     <style>
-        /* تنسيق الأزرار لتكون مرتبة وأنيقة */
+       
         .action-btns { display: flex; gap: 10px; margin-top: 20px; }
         .cart-btn { background-color: #7D5A44; color: white; padding: 12px 25px; border: none; cursor: pointer; border-radius: 5px; font-weight: bold; }
         .fav-btn { background-color: #c5a880; color: white; padding: 12px 25px; border: none; cursor: pointer; border-radius: 5px; font-weight: bold; }

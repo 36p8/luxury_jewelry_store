@@ -1,4 +1,4 @@
-/* تنسيق صفحة التواصل - تصميم فخم وواضح */
+ 
 .contact-page {
     background-color: #f9f6f0;
     min-height: 80vh;
@@ -6,11 +6,11 @@
 }
 
 .hero-section {
-    padding: 80px 20px; /* زيادة المساحة لجعل العنوان يبرز أكثر */
+    padding: 80px 20px;  
     text-align: center;
 }
 
-/* العنوان الرئيسي - تم تكبيره لـ 3.5rem */
+ 
 .hero-title {
     color: #4A3728;
     font-size: 3.5rem; 
@@ -18,7 +18,7 @@
     font-weight: bold;
 }
 
-/* الجملة التوضيحية - تم تكبيرها لـ 1.8rem */
+ 
 .hero-subtitle {
     font-size: 1.8rem; 
     color: #7D5A44;
@@ -46,7 +46,7 @@
 .form-link {
     color: #c5a880;
     text-decoration: none;
-    font-size: 1.6rem; /* تكبير خط الرابط أيضاً ليتناسب مع التصميم */
+    font-size: 1.6rem;  
     font-weight: bold;
     border-bottom: 2px solid #c5a880;
     padding-bottom: 5px;

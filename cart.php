@@ -1,23 +1,22 @@
 <?php
-// 1. بدء الجلسة (Session) - يجب أن يكون هذا السطر في أول الملف تماماً لحفظ المنتجات
-session_start();
+ 
 
-// الإجراء الأول: استقبال المنتج المضاف من صفحة المنتجات
+ 
 if (isset($_POST['add_to_cart'])) {
     $product_id = $_POST['product_id'];
     $product_name = $_POST['product_name'];
-    $product_price = (float)$_POST['product_price']; // تحويل السعر لرقم     للحسابات
+    $product_price = (float)$_POST['product_price'];  
     
-    // إنشاء مصفوفة السلة في الجلسة إذا لم تكن موجودة من قبل
+    
     if (!isset($_SESSION['cart'])) {
         $_SESSION['cart'] = array();
     }
     
-    // إذا كان المنتج موجوداً مسبقاً في السلة، نزيد الكمية فقط
+    
     if (isset($_SESSION['cart'][$product_id])) {
         $_SESSION['cart'][$product_id]['quantity'] += 1;
     } else {
-        // إذا كان منتجاً جديداً، نضيفه ببياناته والكمية الافتراضية = 1
+        
         $_SESSION['cart'][$product_id] = array(
             'name' => $product_name,
             'price' => $product_price,
@@ -25,12 +24,12 @@ if (isset($_POST['add_to_cart'])) {
         );
     }
     
-    // إعادة توجيه لصفحة السلة لمنع تكرار الإضافة عند تحديث الصفحة (Refresh)
+    
     header("Location: cart.php");
     exit();
 }
 
-// الإجراء الثاني: حذف منتج معين من السلة عند الضغط على زر "حذف"
+ 
 if (isset($_GET['action']) && $_GET['action'] == 'delete') {
     $id_to_remove = $_GET['id'];
     if (isset($_SESSION['cart'][$id_to_remove])) {
@@ -40,7 +39,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'delete') {
     exit();
 }
 
-// الإجراء الثالث: تفريغ السلة بالكامل عند الضغط على "تفريغ السلة"
+ 
 if (isset($_GET['action']) && $_GET['action'] == 'clear') {
     unset($_SESSION['cart']);
     header("Location: cart.php");
@@ -139,7 +138,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'clear') {
 <section class="cart-page">
     <h1 class="cart-title">سلة المشتريات</h1>
     <?php 
-    // التحقق إذا كانت السلة تحتوي على منتجات
+     
     if (!empty($_SESSION['cart'])): 
     ?>
         <table class="cart-table">
@@ -154,9 +153,9 @@ if (isset($_GET['action']) && $_GET['action'] == 'clear') {
             </thead>
             <tbody>
                 <?php 
-                $total_all_products = 0; // متغير لحساب المجموع الكلي
+                $total_all_products = 0;  
                 
-                // الدوران على المنتجات الموجودة في السلة وعرضها
+                 
                 foreach ($_SESSION['cart'] as $id => $item): 
                     $total_item_price = $item['price'] * $item['quantity'];
                     $total_all_products += $total_item_price;

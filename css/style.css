@@ -1,5 +1,5 @@
 :root {
-    /* الألوان الخمسة الأساسية الخاصة بك */
+    
     --cream: #F5F1EA;
     --beige: #D7C9B8;
     --gold: #B2967D;
@@ -7,7 +7,7 @@
     --dark-brown: #4A342A;
     --muted-color: #888;
     
-    /* متغيرات عامة للموقع */
+    
     --bg-color: var(--cream);
     --text-color: var(--dark-brown);
     --navbar-bg: #FFFFFF;
@@ -17,10 +17,10 @@
     --btn-text-color: #ffffff;
     --transition-speed: 0.4s;
     
-    /* تنسيقات إضافية للكروت مستوحاة من صور موقعك */
+     
     --card-bg: #FFFFFF;
-    --shadow-color: rgba(74, 52, 42, 0.08); /* ظل ناعم من درجة البني الداكن */
-    --card-radius: 15px; /* انحناء زوايا الكروت المتناسق مع صور المنتجات */
+    --shadow-color: rgba(74, 52, 42, 0.08);  
+    --card-radius: 15px;  
 }
 
 [data-theme="dark"] {
@@ -32,8 +32,8 @@
     --btn-bg: #A07A65; 
     --btn-text-color: #ffffff;
     
-    /* تعديل الكروت لتناسب الوضع الداكن */
-    --card-bg: #3D2B22; /* درجة متناسقة مشتقة من البني الداكن */
+     
+    --card-bg: #3D2B22; 
     --shadow-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -78,57 +78,54 @@ a {
     border-color: var(--text-color);
 }
 
-/* ==========================================================================
-   --- تنسيقات صفحة المعرض (Gallery) المعدلة بألوانك الخاصة ---
-   ========================================================================== */
-
-/* الهيدر الخاص بالمعرض */
+ 
+ 
 .gallery-header {
     text-align: center;
     padding: 60px 20px 40px 20px;
-    background-color: transparent; /* يذوب مع خلفية الموقع كريمي/بني داكن */
+    background-color: transparent;  
 }
 
 .gallery-header h1 {
     font-size: 2.5rem;
     font-weight: 700;
-    color: var(--text-color); /* يتبع لغة ألوان الموقع تلقائياً */
+    color: var(--text-color); 
     margin-bottom: 15px;
 }
 
 .gallery-header p {
-    color: var(--gold); /* استخدام اللون الذهبي الفاخر للنصوص الفرعية */
+    color: var(--gold);  
     font-size: 1.1rem;
 }
 
-/* أزرار الفلترة (مثل: الكل، خواتم، عقود...) مطابقة تماماً لأزرار موقعك بالصورة */
+ 
 .gallery-filter {
     text-align: center;
     margin: 20px 0 40px 0;
 }
 
 .filter-btn {
-    background-color: var(--beige); /* اللون البيج كخلفية زر أساسية */
+    background-color: var(--beige); 
     border: 1px solid var(--beige);
-    color: var(--dark-brown); /* كتابة بالبني الداكن */
+    color: var(--dark-brown);  
     padding: 10px 26px;
     margin: 6px;
     cursor: pointer;
-    border-radius: 8px; /* حواف ناعمة */
+    border-radius: 8px;  
     font-family: inherit;
     font-size: 0.95rem;
     font-weight: 600;
     transition: all var(--transition-speed) ease;
 }
 
-/* التأثير عند تمرير الماوس أو عندما يكون الزر نشطاً */
+ 
 .filter-btn.active, .filter-btn:hover {
-    background-color: var(--brown); /* يتحول للون البني */
+    background-color: var(--brown);  
     border-color: var(--brown);
-    color: #ffffff; /* كتابة باللون الأبيض لتباين ممتاز */
+    color: #ffffff;  
 }
 
-/* شبكة عرض الكروت */
+ 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -138,13 +135,13 @@ a {
     margin: 0 auto;
 }
 
-/* كرت المعرض (مستوحى من تصميم كروت المنتجات الفاخرة في موقعك) */
+ 
 .gallery-card {
     background-color: var(--card-bg);
     border-radius: var(--card-radius);
     overflow: hidden;
     box-shadow: 0 10px 25px var(--shadow-color);
-    border: 1px solid var(--border-color); /* إطار ناعم بلون البيج */
+    border: 1px solid var(--border-color);  
 }.card-img-wrapper {
     position: relative;
     width: 100%;
@@ -153,23 +150,22 @@ a {
     background-color: transparent;
 }
 
-/* تنسيق صورة المنتج داخل الكرت ليحاكي الفخامة دون قص التفاصيل */
+ 
 .card-img-wrapper img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* للحفاظ على أبعاد قطع المجوهرات كاملة ونظيفة */
-    padding: 25px; /* مسافة أمان بيضاء حول القطعة */
+    object-fit: contain;  
+    padding: 25px; 
     transition: transform var(--transition-speed) ease;
 }
 
-/* الطبقة الشفافة عند التمرير (Hover Overlay) باستخدام لونك البني الداكن */
-.card-overlay {
+ .card-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(74, 52, 42, 0.92); /* استخدام الـ dark-brown #4A342A بشفافية راقية */
+    background-color: rgba(74, 52, 42, 0.92);  
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,33 +177,33 @@ a {
     transition: opacity var(--transition-speed) ease;
 }
 
-/* تأثيرات الماوس التفاعلية */
+ 
 .gallery-card:hover .card-img-wrapper img {
-    transform: scale(1.05); /* زووم خفيف جداً يحافظ على فخامة القطعة */
+    transform: scale(1.05);  
 }
 
 .gallery-card:hover .card-overlay {
-    opacity: 1; /* إظهار تفاصيل الـ Hover */
+    opacity: 1; 
 }
 
 .card-overlay h3 {
-    color: var(--cream); /* العنوان باللون الكريمي الفاتح */
+    color: var(--cream);  
     margin-bottom: 12px;
     font-size: 1.35rem;
     font-weight: 600;
 }
 
 .card-overlay p {
-    color: var(--beige); /* النص الوصفي باللون البيج لتباين مريح للعين */
+    color: var(--beige); 
     font-size: 0.95rem;
     margin-bottom: 25px;
     line-height: 1.6;
 }
 
-/* زر الانتقال إلى التفاصيل داخل الـ Hover (Details) */
+ 
 .gallery-link {
     color: var(--dark-brown);
-    background-color: var(--cream); /* زر فاتح كريمي يبرز فوق الخلفية البنية الداكنة */
+    background-color: var(--cream);  
     text-decoration: none;
     padding: 10px 28px;
     font-size: 0.9rem;

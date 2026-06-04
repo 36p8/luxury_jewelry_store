@@ -13,28 +13,28 @@
             max-width: 1200px;
             margin: 30px auto 0 auto;
             padding: 0 20px;
-            text-align: right; /* يبدأ من اليمين ليناسب القراءة العربية */
+            text-align: right; 
         }
 
         .gallery-style-btn {
             display: inline-block;
             color: var(--dark-brown, #4A342A);
-            background-color: var(--cream, #F5F1EA); /* نفس لون الخلفية الكريمي */
+            background-color: var(--cream, #F5F1EA);  
             text-decoration: none;
             padding: 10px 28px;
             font-size: 0.9rem;
             font-weight: 600;
-            border-radius: 6px; /* زوايا ناعمة مثل أزرار الفلترة وروابط الكروت */
-            border: 1px solid var(--beige, #D7C9B8); /* إطار بلون البيج */
+            border-radius: 6px;  
+            border: 1px solid var(--beige, #D7C9B8);  
             transition: all 0.3s ease;
             cursor: pointer;
         }
 
-        /* تأثير التمرير (Hover) المطابق للموقع */
+        
         .gallery-style-btn:hover {
-            background-color: var(--brown, #7D5A44); /* البني الفاخر عند التمرير */
+            background-color: var(--brown, #7D5A44);  
             border-color: var(--brown, #7D5A44);
-            color: #ffffff; /* كتابة باللون الأبيض */
+            color: #ffffff;  
         }
     </style>
 </head>

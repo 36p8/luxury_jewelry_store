@@ -1,4 +1,4 @@
-/* تنسيق حاوية تسجيل الدخول */
+ 
 .auth-wrapper {
     display: flex;
     flex-direction: column;
@@ -6,7 +6,7 @@
     align-items: center;
     min-height: 75vh;
     padding: 20px;
-    padding-top: 100px; /* مسافة لضمان عدم تداخل المربع مع الـ Navbar */
+    padding-top: 100px;  
     box-sizing: border-box;
     background-color: #f9f6f0;
 }

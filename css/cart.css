@@ -10,14 +10,14 @@
 }
 
 .cart-link:hover {
-    color: #c5a880; /* تأثير ذهبي خفيف عند تمرير الماوس */
+    color: #c5a880;  
 }
 
 .cart-count {
     position: absolute;
     top: -8px;
     right: -10px;
-    background-color: #c5a880; /* لون العداد */
+    background-color: #c5a880;  
     color: #ffffff;
     font-size: 11px;
     font-weight: bold;

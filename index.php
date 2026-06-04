@@ -9,12 +9,12 @@
 <?php include 'includes/navbar.php'; ?>
 
 
-<!-- HERO SECTION -->
+ 
 
 <section class="hero-section">
 
 
-    <!-- Slider Images -->
+    
 
     <div class="slider">
 
@@ -30,7 +30,7 @@
 
 
 
-    <!-- Hero Content -->
+     
 
     <div class="hero-content">
 

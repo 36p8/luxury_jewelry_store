@@ -9,7 +9,7 @@
     <title>Ring Details</title>
     <link rel="stylesheet" href="../css/products.css">
     <style>
-        /* تنسيق الأزرار */
+        
         .buttons-container { display: flex; gap: 10px; margin: 20px 0; }
         .btn-style { padding: 12px 25px; border: none; cursor: pointer; border-radius: 5px; font-weight: bold; }
         .cart-btn { background-color: #7D5A44; color: white; }

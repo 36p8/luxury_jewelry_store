@@ -1,6 +1,6 @@
 <?php
 session_start();
-// استدعاء ملف الاتصال الخاص بالبنت الثالثة
+ 
 require_once '../database/db.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
@@ -15,26 +15,25 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login_submit'])) {
     }
 
     try {
-        // 2. جلب بيانات المستخدم بالأمان باستخدام الـ Prepared Statement ومتغير $pdo لشغل زميلتك
+         
         $sql = "SELECT * FROM users WHERE email = :email";
         $stmt = $pdo->prepare($sql);
         $stmt->execute([':email' => $email]);
-        $user = $stmt->fetch(); // بما أنها وضعت FETCH_ASSOC تلقائياً في ملف الـ db.php فهو مجهز تماماً
-
-        // 3. Error Handling: التحقق من وجود الحساب وتطابق كلمة المرور المشفرة
+        $user = $stmt->fetch();  
+       
         if ($user && password_verify($password, $user['password'])) {
             
-            // 4. Sessions: حفظ جلسة المستخدم بالكامل وبشكل مستمر
+            
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
 
-            // توجيه المستخدم إلى الصفحة الرئيسية بعد تسجيل الدخول الناجح
+            
             header("Location: ../home.php");
             exit();
             
         } else {
-            // خطأ في كلمة المرور أو الحساب غير موجود
+            
             $_SESSION['error'] = "البريد الإلكتروني أو كلمة المرور غير صحيحة.";
             header("Location: ../login.php");
             exit();

@@ -24,7 +24,7 @@ body{
 
 }
 
-/* ================= PRODUCTS PAGE ================= */
+ 
 
 .products-page{
 
@@ -70,7 +70,7 @@ body{
 
 }
 
-/* GRID LAYOUT */
+ 
 
 .products-container{
 
@@ -144,7 +144,7 @@ body{
 
 }
 
-/* ================= DETAILS PAGE ================= */
+ 
 
 .details-page{
 
@@ -293,9 +293,7 @@ ul{
     line-height: 2;
 
 }
-
-/* ================= RESPONSIVE ================= */
-
+ 
 @media(max-width:768px){
 
     .details-container{
@@ -311,13 +309,13 @@ ul{
     }
 
 }
-/* حاوية الزر للتحكم في موقعه */
+ 
 .back-to-home-container {
     max-width: 1200px;
     margin: 30px auto 10px auto;
     padding: 0 20px;
-    text-align: right; /* لجعل الزر يبدأ من اليمين متناسقاً مع لغة الموقع RTL */
-}/* تصميم الزر الفاخر */
+    text-align: right;  
+} 
 .back-home-btn {
     display: inline-flex;
     align-items: center;
@@ -328,19 +326,19 @@ ul{
     padding: 10px 24px;
     font-size: 0.9rem;
     font-weight: 600;
-    border-radius: 8px; /* حواف دائرية ناعمة تطابق أزرار الفلترة */
+    border-radius: 8px;  
     cursor: pointer;
     transition: all var(--transition-speed) ease;
 }
 
-/* تأثير تمرير الماوس (Hover) */
+ 
 .back-home-btn:hover {
     background-color: var(--dark-brown);
     color: var(--cream);
     border-color: var(--dark-brown);
 }
 
-/* تحريك السهم بشكل ناعم عند تمرير الماوس */
+ 
 .back-home-btn:hover .arrow-icon {
     transform: translateX(-4px);
 }
@@ -351,7 +349,7 @@ ul{
     display: inline-block;
 }
 
-/* دعم الوضع الداكن تلقائياً */
+ 
 [data-theme="dark"] .back-home-btn {
     color: var(--cream);
     border-color: var(--brown);

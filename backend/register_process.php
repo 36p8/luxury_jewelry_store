@@ -1,6 +1,6 @@
 <?php
 session_start();
-// استدعاء ملف الاتصال الخاص بالبنت الثالثة
+ 
 require_once '../database/db.php'; 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register_submit'])) {
@@ -9,14 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register_submit'])) {
     $password = $_POST['password'];
     $confirm_password = $_POST['confirm_password'];
 
-    // 1. Error Handling: التأكد من تعبئة جميع الحقول
+    
     if (empty($username) || empty($email) || empty($password) || empty($confirm_password)) {
         $_SESSION['error'] = "برجاء ملء جميع الحقول الإلزامية.";
         header("Location: ../register.php");
         exit();
     }
 
-    // 2. Error Handling: التأكد من تطابق كلمة المرور
+ 
     if ($password !== $confirm_password) {
         $_SESSION['error'] = "كلمتا المرور غير متطابقتين.";
         header("Location: ../register.php");
@@ -34,10 +34,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register_submit'])) {
             exit();
         }
 
-        // تشفير كلمة المرور لحماية أمنية عالية
+         
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-        // 4. إدخال بيانات المستخدم بناءً على جدول users الخاص بها
+       
         $sql = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
         $stmt = $pdo->prepare($sql);
         

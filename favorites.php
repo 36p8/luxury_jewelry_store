@@ -3,7 +3,7 @@ session_start();
 include 'includes/header.php';
 include 'includes/navbar.php';
 
-// معالجة الإضافة للمفضلة
+ 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_fav'])) {
     $product_id = $_POST['product_id'];
     
@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_fav'])) {
         $_SESSION['favorites'] = array();
     }
     
-    // إضافة المنتج إذا لم يكن موجوداً
+     
     if (!isset($_SESSION['favorites'][$product_id])) {
         $_SESSION['favorites'][$product_id] = array(
             'name' => $_POST['product_name'],
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['add_to_fav'])) {
     }
 }
 
-// معالجة الحذف من المفضلة
+ 
 if (isset($_GET['action']) && $_GET['action'] == 'remove') {
     $id = $_GET['id'];
     unset($_SESSION['favorites'][$id]);

@@ -1,9 +1,9 @@
 <?php include 'includes/header.php'; ?>
 <?php include 'includes/navbar.php'; ?>
 
-<!-- قسم الواجهة المحدث -->
+ 
 <section class="hero-section">
-    <!-- الصورة ستكون خلفية في الـ CSS الخاص بهذا الكلاس -->
+     
     
     <div class="welcome-section">
         <h1 class="hero-title">شكرا لتواصلك معنا. سيتم الرد عليك قريبا!</h1>
